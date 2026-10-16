@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flood-sentry"
+version = "0.1.0"
+description = "AI flood detection and risk-zone mapping from Sentinel-1 SAR data"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "rasterio>=1.3",
+  "pyyaml>=6.0",
+  "shapely>=2.0",
+  "pystac-client>=0.7",
+  "planetary-computer>=1.0",
+  "torch>=2.1",
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.27",
+]
+
+[project.scripts]
+flood-sentry = "flood_sentry.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

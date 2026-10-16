@@ -1,0 +1,32 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# data artifacts
+data/raw/*
+data/processed/*
+data/features/*
+data/labels/*
+data/predictions/*
+data/models/*
+data/risk/*
+!data/**/.gitkeep
+
+# models / logs
+*.pt
+*.onnx
+*.log
+
+# geo outputs
+*.tif
+*.tiff
+*.gpkg
+*.geojson
+
+# os / editor
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
